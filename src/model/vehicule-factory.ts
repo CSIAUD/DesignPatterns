@@ -1,43 +1,7 @@
-import { LogMethod } from "./log";
-
-
-interface Rouable {
-    type: number;
-
-    avancer(): number;
-}
-
-abstract class Vehicule{
-    private roues: Rouable[]=[]; 
-    private km = 0
-
-    public constructor (roues : Rouable[]){
-        this.roues=roues
-    }
-
-        @LogMethod()
-        public avancer(){
-        this.km += this.roues.reduce((acc, roue) => {
-            if(acc === null){
-                return roue.avancer();
-            }
-            return Math.min(acc, roue.avancer());
-        }, 99); 
-    }
-}
-    
-class Roue implements Rouable{
-    public type = -1;
-    public constructor(type: number = -1){
-        this.type = type != -1 ? type : 0;
-    }
-    public avancer(){
-        return 1;
-    }
-}
-
-class Voiture extends Vehicule{}
-class Camion extends Vehicule{}
+import { Camion } from "./camion";
+import { Roue } from "./roue";
+import { Vehicule } from "./vehicule";
+import { Voiture } from "./voiture";
 
 export class VehiculeFactory{
     private garage: Vehicule[]= [];

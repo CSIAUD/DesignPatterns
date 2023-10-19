@@ -1,6 +1,8 @@
 // Liste ====================================================================
 // import { List } from "./class.list";
 
+import { VehiculeFactory } from "./model/vehicule-factory";
+
 // const liste = new List();
 // liste.add(12);
 // liste.add(23);
@@ -13,12 +15,12 @@
 // }
 
 // Véhicule =================================================================
-import { VehiculeFactory } from "./class.vehicule";
 
 const factory = new VehiculeFactory();
 // const vehicule = factory.createVehicule();
 const v1 = factory.createVehicule(987);
 const v2 = factory.createVehicule();
 v1.avancer();
+v2.avancer();
 // console.log(v1);
 // console.log(v2);
