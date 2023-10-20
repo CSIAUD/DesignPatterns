@@ -1,3 +1,7 @@
 import { Vehicule } from "./vehicule";
 
-export class Voiture extends Vehicule{}
+export class Voiture extends Vehicule{
+    protected getImpl(): string {
+        return "Voiture";
+    }
+}

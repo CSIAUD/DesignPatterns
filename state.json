@@ -1,0 +1,14 @@
+[
+  {
+    "km": 1,
+    "typeClass": "Voiture",
+    "nombreRoues": 4,
+    "typeRoues": "Roue"
+  },
+  {
+    "km": 1,
+    "typeClass": "Camion",
+    "nombreRoues": 6,
+    "typeRoues": "Roue"
+  }
+]
